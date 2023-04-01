@@ -21,6 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 .container {
@@ -41,7 +42,7 @@ img {
 }
 
 .desktop_img {
-  display: block;
+  display: none;
   width: 900px;
   height: 100%;
   border-radius: 1.5em 0 0 1.5em;
@@ -118,7 +119,7 @@ img {
 }
 
 /* For smaller-screen */
-@media (max-width: 260px) {
+@media (max-width: 350px) {
   .container {
     margin: 3em;
     max-width: 200px;
@@ -135,6 +136,17 @@ img {
   }
 
   .desktop_img {
+    display: none;
+  }
+}
+
+/* For big screen */
+@media (min-width: 650px) {
+  .desktop_img {
+    display: block;
+  }
+
+  .mobile_img {
     display: none;
   }
 }
